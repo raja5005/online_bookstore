@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart | Online Bookstore</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/cart.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <h1 class="page-title">Your cart</h1>
+    <p id="status" class="status" role="status">Loading your cart…</p>
+    <div id="cart" class="cart-layout" hidden>
+      <section id="cart-lines" aria-label="Books in your cart"></section>
+      <aside id="cart-summary" class="panel" aria-label="Order summary"></aside>
+    </div>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

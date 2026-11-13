@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1676" height="897" viewBox="0 0 1676 897">
+<rect width="1676" height="897" fill="#ffffff"/>
+<text x="838.0" y="32.0" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1f2937" text-anchor="middle" font-weight="bold">Paying for an order: Strategy, State and Observer working together</text>
+<line x1="100" y1="118" x2="100" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="25.0" y="70" width="150" height="48" rx="4" fill="#334155"/>
+<text x="100.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">Customer</text>
+<text x="100.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">browser</text>
+<line x1="272" y1="118" x2="272" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="197.0" y="70" width="150" height="48" rx="4" fill="#334155"/>
+<text x="272.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">PaymentService</text>
+<text x="272.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">service</text>
+<line x1="444" y1="118" x2="444" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="369.0" y="70" width="150" height="48" rx="4" fill="#0f766e"/>
+<text x="444.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">OrderLifecycle</text>
+<text x="444.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">State: context</text>
+<line x1="616" y1="118" x2="616" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="540.4" y="70" width="151.2" height="48" rx="4" fill="#b45309"/>
+<text x="616.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">PaymentProcessor</text>
+<text x="616.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">Strategy: context</text>
+<line x1="788" y1="118" x2="788" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="708.3" y="70" width="159.39999999999998" height="48" rx="4" fill="#b45309"/>
+<text x="788.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">CreditCardPayment</text>
+<text x="788.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">Strategy: concrete</text>
+<line x1="960" y1="118" x2="960" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="885.0" y="70" width="150" height="48" rx="4" fill="#0f766e"/>
+<text x="960.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">PendingState</text>
+<text x="960.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">State: concrete</text>
+<line x1="1132" y1="118" x2="1132" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="1044.1" y="70" width="175.79999999999998" height="48" rx="4" fill="#6d28d9"/>
+<text x="1132.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">OrderEventPublisher</text>
+<text x="1132.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">Observer: subject</text>
+<line x1="1304" y1="118" x2="1304" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="1229.0" y="70" width="150" height="48" rx="4" fill="#6d28d9"/>
+<text x="1304.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">InAppNotifier</text>
+<text x="1304.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">Observer: observer</text>
+<line x1="1476" y1="118" x2="1476" y2="842" stroke="#94a3b8" stroke-width="1.3" stroke-dasharray="5 4"/>
+<rect x="1401.0" y="70" width="150" height="48" rx="4" fill="#6d28d9"/>
+<text x="1476.0" y="91.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">EmailNotifier</text>
+<text x="1476.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#e5e7eb" text-anchor="middle" font-weight="normal">Observer: observer</text>
+<path d="M100.0 142.0 L272.0 142.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="272.0,142.0 261.0,147.0 261.0,137.0" fill="#475569"/>
+<rect x="90.8" y="122.5" width="190.3" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="186.0" y="136.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">POST /api/orders/12/payments</text>
+<path d="M272 168 H302 V182" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M302.0 182.0 L274.0 182.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="274.0,182.0 285.0,177.0 285.0,187.0" fill="#475569"/>
+<rect x="305.0" y="165.5" width="125.9" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="310.0" y="179.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="start" font-weight="normal">lock the order row</text>
+<path d="M272.0 210.0 L444.0 210.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="444.0,210.0 433.0,215.0 433.0,205.0" fill="#475569"/>
+<rect x="330.5" y="190.5" width="55.1" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="358.0" y="204.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">actions</text>
+<path d="M444.0 244.0 L272.0 244.0" fill="none" stroke="#475569" stroke-width="1.4" stroke-dasharray="6 4"/>
+<polyline points="283.0,238.0 272.0,244.0 283.0,250.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<rect x="298.3" y="224.5" width="119.5" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="358.0" y="238.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="normal" font-style="italic">(&quot;pay&quot;, &quot;cancel&quot;)</text>
+<path d="M272.0 278.0 L616.0 278.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="616.0,278.0 605.0,283.0 605.0,273.0" fill="#475569"/>
+<rect x="352.1" y="258.5" width="183.9" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="444.0" y="272.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">charge(total, card details)</text>
+<path d="M616.0 312.0 L788.0 312.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="788.0,312.0 777.0,317.0 777.0,307.0" fill="#475569"/>
+<rect x="635.8" y="292.5" width="132.4" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="702.0" y="306.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">pay(total, details)</text>
+<path d="M788.0 346.0 L616.0 346.0" fill="none" stroke="#475569" stroke-width="1.4" stroke-dasharray="6 4"/>
+<polyline points="627.0,340.0 616.0,346.0 627.0,352.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<rect x="619.7" y="326.5" width="164.6" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="702.0" y="340.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="normal" font-style="italic">PaymentResult(succeeded)</text>
+<path d="M616.0 380.0 L272.0 380.0" fill="none" stroke="#475569" stroke-width="1.4" stroke-dasharray="6 4"/>
+<polyline points="283.0,374.0 272.0,380.0 283.0,386.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<rect x="397.1" y="360.5" width="93.7" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="444.0" y="374.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="normal" font-style="italic">PaymentResult</text>
+<path d="M272 406 H302 V420" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M302.0 420.0 L274.0 420.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="274.0,420.0 285.0,415.0 285.0,425.0" fill="#475569"/>
+<rect x="305.0" y="403.5" width="151.7" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="310.0" y="417.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="start" font-weight="normal">save Payment (SUCCESS)</text>
+<path d="M272.0 448.0 L444.0 448.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="444.0,448.0 433.0,453.0 433.0,443.0" fill="#475569"/>
+<rect x="269.3" y="428.5" width="177.4" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="358.0" y="442.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">pay(&quot;Paid by credit card&quot;)</text>
+<path d="M444.0 482.0 L960.0 482.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="960.0,482.0 949.0,487.0 949.0,477.0" fill="#475569"/>
+<rect x="632.6" y="462.5" width="138.8" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="702.0" y="476.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">pay(lifecycle, note)</text>
+<path d="M960.0 516.0 L444.0 516.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="444.0,516.0 455.0,511.0 455.0,521.0" fill="#475569"/>
+<rect x="655.1" y="496.5" width="93.7" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="702.0" y="510.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">move_to(PAID)</text>
+<path d="M444.0 550.0 L1132.0 550.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="1132.0,550.0 1121.0,555.0 1121.0,545.0" fill="#475569"/>
+<rect x="702.5" y="530.5" width="171.0" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="788.0" y="544.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">publish(ORDER_PAID event)</text>
+<path d="M1132.0 584.0 L1304.0 584.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="1304.0,584.0 1293.0,589.0 1293.0,579.0" fill="#475569"/>
+<rect x="1171.1" y="564.5" width="93.7" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="1218.0" y="578.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">update(event)</text>
+<path d="M1304 610 H1334 V624" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M1334.0 624.0 L1306.0 624.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="1306.0,624.0 1317.0,619.0 1317.0,629.0" fill="#475569"/>
+<rect x="1337.0" y="607.5" width="138.8" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="1342.0" y="621.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="start" font-weight="normal">add Notification row</text>
+<path d="M1132.0 652.0 L1476.0 652.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="1476.0,652.0 1465.0,657.0 1465.0,647.0" fill="#475569"/>
+<rect x="1257.1" y="632.5" width="93.7" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="1304.0" y="646.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">update(event)</text>
+<path d="M1476 678 H1506 V692" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M1506.0 692.0 L1478.0 692.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="1478.0,692.0 1489.0,687.0 1489.0,697.0" fill="#475569"/>
+<rect x="1509.0" y="675.5" width="158.1" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="1514.0" y="689.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="start" font-weight="normal">hold email until commit</text>
+<path d="M272 712 H302 V726" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M302.0 726.0 L274.0 726.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="274.0,726.0 285.0,721.0 285.0,731.0" fill="#475569"/>
+<rect x="305.0" y="709.5" width="125.9" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="310.0" y="723.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="start" font-weight="normal">commit transaction</text>
+<path d="M272.0 754.0 L1476.0 754.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polyline points="1465.0,760.0 1476.0,754.0 1465.0,748.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<rect x="791.7" y="734.5" width="164.6" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="874.0" y="748.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1f2937" text-anchor="middle" font-weight="normal">after commit: send email</text>
+<path d="M272.0 788.0 L100.0 788.0" fill="none" stroke="#475569" stroke-width="1.4" stroke-dasharray="6 4"/>
+<polyline points="111.0,782.0 100.0,788.0 111.0,794.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<rect x="90.8" y="768.5" width="190.3" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="186.0" y="782.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="normal" font-style="italic">201 { payment, order: PAID }</text>
+<path d="M60.0 868.0 L100.0 868.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="100.0,868.0 89.0,873.0 89.0,863.0" fill="#475569"/>
+<text x="108.0" y="872.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">call</text>
+<path d="M163.2 868.0 L203.2 868.0" fill="none" stroke="#475569" stroke-width="1.4" stroke-dasharray="6 4"/>
+<polyline points="192.2,874.0 203.2,868.0 192.2,862.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<text x="211.2" y="872.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">return value</text>
+<path d="M316.8 868.0 L356.8 868.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polyline points="345.8,874.0 356.8,868.0 345.8,862.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<text x="364.8" y="872.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">sent later, after commit</text>
+<rect x="546.0" y="861" width="14" height="14" rx="2" fill="#b45309"/>
+<text x="566.0" y="872.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">Strategy pattern</text>
+<rect x="696.4" y="861" width="14" height="14" rx="2" fill="#0f766e"/>
+<text x="716.4" y="872.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">State pattern</text>
+<rect x="827.9" y="861" width="14" height="14" rx="2" fill="#6d28d9"/>
+<text x="847.9" y="872.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">Observer pattern</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1444" height="740" viewBox="0 0 1444 740">
+<rect width="1444" height="740" fill="#ffffff"/>
+<text x="722.0" y="32.0" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1f2937" text-anchor="middle" font-weight="bold">State pattern: the order lifecycle</text>
+<rect x="50" y="80" width="289" height="242" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+<path d="M50 122 V84 a4 4 0 0 1 4 -4 H335 a4 4 0 0 1 4 4 V122 Z" fill="#334155"/>
+<line x1="50" y1="122" x2="339" y2="122" stroke="#94a3b8"/>
+<text x="194.5" y="95.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#ffffff" text-anchor="middle" font-weight="normal">«context»</text>
+<text x="194.5" y="113.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#ffffff" text-anchor="middle" font-weight="bold">OrderLifecycle</text>
+<text x="60.0" y="141.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">order: Order</text>
+<text x="60.0" y="159.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">publisher: OrderEventPublisher</text>
+<line x1="50" y1="168" x2="339" y2="168" stroke="#94a3b8"/>
+<text x="60.0" y="187.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">state: OrderState   (from order.status)</text>
+<text x="60.0" y="205.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">pay(note)</text>
+<text x="60.0" y="223.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">ship(actor_id)</text>
+<text x="60.0" y="241.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">deliver(actor_id)</text>
+<text x="60.0" y="259.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">cancel(actor_id, note)</text>
+<text x="60.0" y="277.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">move_to(status, actor_id, note)</text>
+<text x="60.0" y="295.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">restore_stock()</text>
+<text x="60.0" y="313.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">refund_payment()</text>
+<rect x="520" y="80" width="221" height="188" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+<path d="M520 122 V84 a4 4 0 0 1 4 -4 H737 a4 4 0 0 1 4 4 V122 Z" fill="#1d4ed8"/>
+<line x1="520" y1="122" x2="741" y2="122" stroke="#94a3b8"/>
+<text x="630.5" y="95.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#ffffff" text-anchor="middle" font-weight="normal">«abstract»</text>
+<text x="630.5" y="113.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#ffffff" text-anchor="middle" font-weight="bold" font-style="italic">OrderState</text>
+<text x="530.0" y="141.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">status: OrderStatus</text>
+<text x="530.0" y="159.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">actions: tuple[str, ...]</text>
+<line x1="520" y1="168" x2="741" y2="168" stroke="#94a3b8"/>
+<text x="530.0" y="187.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">pay(order, note)</text>
+<text x="530.0" y="205.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">ship(order, actor_id)</text>
+<text x="530.0" y="223.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">deliver(order, actor_id)</text>
+<text x="530.0" y="241.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">cancel(order, actor_id, note)</text>
+<text x="530.0" y="259.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">_refuse(action)</text>
+<rect x="50" y="520" width="289" height="102" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+<path d="M50 548 V524 a4 4 0 0 1 4 -4 H335 a4 4 0 0 1 4 4 V548 Z" fill="#f1f5f9"/>
+<line x1="50" y1="548" x2="339" y2="548" stroke="#94a3b8"/>
+<text x="194.5" y="539.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1f2937" text-anchor="middle" font-weight="bold">Order</text>
+<text x="60.0" y="567.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">status: OrderStatus</text>
+<text x="60.0" y="585.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">history: list[OrderStatusChange]</text>
+<line x1="50" y1="594" x2="339" y2="594" stroke="#94a3b8"/>
+<text x="60.0" y="613.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">change_status(status, changed_by, note)</text>
+<rect x="389" y="520" width="187" height="102" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+<path d="M389 548 V524 a4 4 0 0 1 4 -4 H572 a4 4 0 0 1 4 4 V548 Z" fill="#dbeafe"/>
+<line x1="389" y1="548" x2="576" y2="548" stroke="#94a3b8"/>
+<text x="482.5" y="539.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1e3a8a" text-anchor="middle" font-weight="bold">PendingState</text>
+<text x="399.0" y="567.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">actions = (pay, cancel)</text>
+<line x1="389" y1="576" x2="576" y2="576" stroke="#94a3b8"/>
+<text x="399.0" y="595.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">pay()</text>
+<text x="399.0" y="613.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">cancel()</text>
+<rect x="596" y="520" width="187" height="102" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+<path d="M596 548 V524 a4 4 0 0 1 4 -4 H779 a4 4 0 0 1 4 4 V548 Z" fill="#dbeafe"/>
+<line x1="596" y1="548" x2="783" y2="548" stroke="#94a3b8"/>
+<text x="689.5" y="539.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1e3a8a" text-anchor="middle" font-weight="bold">PaidState</text>
+<text x="606.0" y="567.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">actions = (ship, cancel)</text>
+<line x1="596" y1="576" x2="783" y2="576" stroke="#94a3b8"/>
+<text x="606.0" y="595.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">ship()</text>
+<text x="606.0" y="613.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">cancel()</text>
+<rect x="803" y="520" width="187" height="84" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+<path d="M803 548 V524 a4 4 0 0 1 4 -4 H986 a4 4 0 0 1 4 4 V548 Z" fill="#dbeafe"/>
+<line x1="803" y1="548" x2="990" y2="548" stroke="#94a3b8"/>
+<text x="896.5" y="539.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1e3a8a" text-anchor="middle" font-weight="bold">ShippedState</text>
+<text x="813.0" y="567.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">actions = (deliver,)</text>
+<line x1="803" y1="576" x2="990" y2="576" stroke="#94a3b8"/>
+<text x="813.0" y="595.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">deliver()</text>
+<rect x="1010" y="520" width="187" height="64" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+<path d="M1010 548 V524 a4 4 0 0 1 4 -4 H1193 a4 4 0 0 1 4 4 V548 Z" fill="#dbeafe"/>
+<line x1="1010" y1="548" x2="1197" y2="548" stroke="#94a3b8"/>
+<text x="1103.5" y="539.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1e3a8a" text-anchor="middle" font-weight="bold">DeliveredState</text>
+<text x="1020.0" y="567.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">actions = ()</text>
+<line x1="1010" y1="576" x2="1197" y2="576" stroke="#94a3b8"/>
+<rect x="1217" y="520" width="187" height="64" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.3"/>
+<path d="M1217 548 V524 a4 4 0 0 1 4 -4 H1400 a4 4 0 0 1 4 4 V548 Z" fill="#dbeafe"/>
+<line x1="1217" y1="548" x2="1404" y2="548" stroke="#94a3b8"/>
+<text x="1310.5" y="539.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" fill="#1e3a8a" text-anchor="middle" font-weight="bold">CancelledState</text>
+<text x="1227.0" y="567.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">actions = ()</text>
+<line x1="1217" y1="576" x2="1404" y2="576" stroke="#94a3b8"/>
+<path d="M339.0 152.6 L520.0 152.6" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polyline points="509.0,158.6 520.0,152.6 509.0,146.6" fill="none" stroke="#475569" stroke-width="1.4"/>
+<rect x="382.6" y="131.1" width="93.7" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="429.5" y="144.6" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="middle" font-weight="normal">current state</text>
+<path d="M482.5 470 H1310.5" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M482.5 520 V470" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M689.5 520 V470" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M896.5 520 V470" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M1103.5 520 V470" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M1310.5 520 V470" fill="none" stroke="#475569" stroke-width="1.4"/>
+<path d="M630.5 470.0 L630.5 282.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="630.5,268.0 638.5,282.0 622.5,282.0" fill="#ffffff" stroke="#475569" stroke-width="1.4"/>
+<path d="M122.2 322.0 L122.2 520.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polyline points="116.2,509.0 122.2,520.0 128.2,509.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<rect x="125.2" y="411.5" width="42.2" height="18.5" fill="#ffffff" opacity="0.92"/>
+<text x="130.2" y="425.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">order</text>
+<path d="M781 80 H1127 L1141 94 V215 H781 Z" fill="#fffbea" stroke="#d6b656" stroke-width="1.2"/>
+<path d="M1127 80 V94 H1141" fill="none" stroke="#d6b656" stroke-width="1.2"/>
+<text x="791.0" y="100.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">OrderState refuses every action by default:</text>
+<text x="791.0" y="117.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">&quot;A shipped order cannot be cancelled.&quot; (HTTP 409)</text>
+<text x="791.0" y="134.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">Each concrete state overrides only the actions</text>
+<text x="791.0" y="151.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">it allows, then calls move_to() on the context.</text>
+<text x="791.0" y="168.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal"></text>
+<text x="791.0" y="185.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">move_to() records the history and publishes an</text>
+<text x="791.0" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2937" text-anchor="start" font-weight="normal">event for the Observer pattern.</text>
+<rect x="50" y="679" width="14" height="14" rx="2" fill="#334155" stroke="#94a3b8"/>
+<text x="70.0" y="690.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">Context / client</text>
+<rect x="192.8" y="679" width="14" height="14" rx="2" fill="#1d4ed8" stroke="#94a3b8"/>
+<text x="212.8" y="690.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">Abstract class / interface</text>
+<rect x="398.6" y="679" width="14" height="14" rx="2" fill="#dbeafe" stroke="#94a3b8"/>
+<text x="418.6" y="690.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">Concrete class</text>
+<rect x="528.8" y="679" width="14" height="14" rx="2" fill="#f1f5f9" stroke="#94a3b8"/>
+<text x="548.8" y="690.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">Data / model</text>
+<path d="M50.0 712.0 L76.0 712.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polygon points="90.0,712.0 76.0,720.0 76.0,704.0" fill="#ffffff" stroke="#475569" stroke-width="1.4"/>
+<text x="98.0" y="716.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">inherits from</text>
+<path d="M201.9 712.0 L241.9 712.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<polyline points="230.9,718.0 241.9,712.0 230.9,706.0" fill="none" stroke="#475569" stroke-width="1.4"/>
+<text x="249.9" y="716.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#6b7280" text-anchor="start" font-weight="normal">uses / holds</text>
+</svg>

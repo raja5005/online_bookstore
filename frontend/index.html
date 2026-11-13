@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Books | Online Bookstore</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/catalog.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <h1 class="page-title">Browse books</h1>
+    <form id="search-form" class="toolbar" role="search">
+      <input id="search" type="search" maxlength="100" placeholder="Search by title, author or ISBN" aria-label="Search books">
+      <select id="category" aria-label="Filter by category">
+        <option value="">All categories</option>
+      </select>
+      <button class="button" type="submit">Search</button>
+    </form>
+    <p id="status" class="status" role="status">Loading books…</p>
+    <div id="book-grid" class="book-grid"></div>
+    <nav id="pager" class="pager" aria-label="Pages"></nav>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

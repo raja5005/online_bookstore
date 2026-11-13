@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order | Online Bookstore</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/admin-order.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <p><a href="/admin-orders.html">← All orders</a></p>
+    <p id="status" class="status" role="status">Loading…</p>
+    <div id="order" hidden>
+      <div class="order-head">
+        <h1 id="order-title">Order</h1>
+        <span id="order-status"></span>
+      </div>
+      <p id="order-meta" class="status"></p>
+
+      <div class="cart-layout">
+        <div>
+          <section class="order-section" aria-labelledby="items-heading">
+            <h2 id="items-heading">Books</h2>
+            <div id="order-items"></div>
+            <div class="summary-row summary-total"><span>Total</span><span id="order-total"></span></div>
+          </section>
+          <section class="order-section" aria-labelledby="address-heading">
+            <h2 id="address-heading">Shipping address</h2>
+            <p id="order-address" class="address"></p>
+          </section>
+          <section id="payments-section" class="order-section" aria-labelledby="payments-heading" hidden>
+            <h2 id="payments-heading">Payments</h2>
+            <ul id="order-payments" class="plain-list"></ul>
+          </section>
+          <section class="order-section" aria-labelledby="history-heading">
+            <h2 id="history-heading">Status history</h2>
+            <ol id="order-history" class="plain-list"></ol>
+          </section>
+        </div>
+
+        <div class="side">
+          <section class="panel" aria-labelledby="customer-heading">
+            <h2 id="customer-heading" class="summary-title">Customer</h2>
+            <p id="customer-name" class="customer-name"></p>
+            <p id="customer-email" class="hint"></p>
+          </section>
+          <section class="panel" aria-labelledby="actions-heading">
+            <h2 id="actions-heading" class="summary-title">Next step</h2>
+            <p id="next-step" class="hint"></p>
+            <div id="actions" class="stacked-actions"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

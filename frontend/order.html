@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order | Online Bookstore</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/order.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <p id="status" class="status" role="status">Loading your order…</p>
+    <div id="order" hidden>
+      <div class="order-head">
+        <h1 id="order-title">Order</h1>
+        <span id="order-status"></span>
+      </div>
+      <p id="order-meta" class="status"></p>
+
+      <div class="cart-layout">
+        <div>
+          <section class="order-section" aria-labelledby="items-heading">
+            <h2 id="items-heading">Books</h2>
+            <div id="order-items"></div>
+            <div class="summary-row summary-total"><span>Total</span><span id="order-total"></span></div>
+          </section>
+          <section class="order-section" aria-labelledby="address-heading">
+            <h2 id="address-heading">Shipping address</h2>
+            <p id="order-address" class="address"></p>
+          </section>
+          <section id="payments-section" class="order-section" aria-labelledby="payments-heading" hidden>
+            <h2 id="payments-heading">Payment attempts</h2>
+            <ul id="order-payments" class="plain-list"></ul>
+          </section>
+          <section class="order-section" aria-labelledby="history-heading">
+            <h2 id="history-heading">Status history</h2>
+            <ol id="order-history" class="plain-list"></ol>
+          </section>
+        </div>
+
+        <div class="side">
+        <aside id="payment-panel" class="panel" aria-labelledby="payment-heading" hidden>
+          <h2 id="payment-heading" class="summary-title">Pay for this order</h2>
+          <p id="payment-error" class="form-error" role="alert" hidden></p>
+          <form id="payment-form">
+            <fieldset class="method-choice">
+              <legend>Payment method</legend>
+              <label><input type="radio" name="method" value="CREDIT_CARD" checked> Credit card</label>
+              <label><input type="radio" name="method" value="PAYPAL"> PayPal</label>
+              <label><input type="radio" name="method" value="BANK_TRANSFER"> Bank transfer</label>
+            </fieldset>
+
+            <fieldset class="method-fields" data-method="CREDIT_CARD">
+              <div class="field">
+                <label for="cardholder-name">Name on card</label>
+                <input id="cardholder-name" name="cardholder_name" maxlength="100" autocomplete="off" required>
+              </div>
+              <div class="field">
+                <label for="card-number">Card number</label>
+                <input id="card-number" name="card_number" inputmode="numeric" maxlength="23" autocomplete="off" required>
+              </div>
+              <div class="field-row field-row-3">
+                <div class="field">
+                  <label for="expiry-month">Month</label>
+                  <select id="expiry-month" name="expiry_month" required></select>
+                </div>
+                <div class="field">
+                  <label for="expiry-year">Year</label>
+                  <input id="expiry-year" name="expiry_year" type="number" min="2000" max="2100" autocomplete="off" required>
+                </div>
+                <div class="field">
+                  <label for="cvv">CVV</label>
+                  <input id="cvv" name="cvv" inputmode="numeric" maxlength="4" autocomplete="off" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="method-fields" data-method="PAYPAL" disabled hidden>
+              <div class="field">
+                <label for="paypal-email">PayPal email</label>
+                <input id="paypal-email" name="paypal_email" type="email" autocomplete="off" required>
+              </div>
+            </fieldset>
+
+            <fieldset class="method-fields" data-method="BANK_TRANSFER" disabled hidden>
+              <div class="field">
+                <label for="account-name">Account holder</label>
+                <input id="account-name" name="account_name" maxlength="100" autocomplete="off" required>
+              </div>
+              <div class="field">
+                <label for="routing-number">Routing number</label>
+                <input id="routing-number" name="routing_number" inputmode="numeric" maxlength="11" autocomplete="off" required>
+              </div>
+              <div class="field">
+                <label for="account-number">Account number</label>
+                <input id="account-number" name="account_number" inputmode="numeric" maxlength="20" autocomplete="off" required>
+              </div>
+            </fieldset>
+
+            <button id="pay-button" class="button wide" type="submit">Pay</button>
+          </form>
+
+          <p class="hint">Payments are simulated. Never enter real card or bank details.</p>
+          <details class="test-details">
+            <summary>Test payment details</summary>
+            <dl>
+              <dt>Credit card</dt>
+              <dd>4242 4242 4242 4242 is approved, with any future expiry and any 3-digit CVV. 4000 0000 0000 0002 is declined.</dd>
+              <dt>PayPal</dt>
+              <dd>Any email is approved, except declined@example.com.</dd>
+              <dt>Bank transfer</dt>
+              <dd>Routing number 011000015 with any account number is approved, unless the account number ends in 0000.</dd>
+            </dl>
+          </details>
+        </aside>
+
+        <section id="cancel-panel" class="panel" aria-labelledby="cancel-heading" hidden>
+          <h2 id="cancel-heading" class="summary-title">Cancel this order</h2>
+          <p id="cancel-text" class="hint"></p>
+          <button id="cancel-button" class="button button-quiet button-danger wide" type="button">Cancel order</button>
+        </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

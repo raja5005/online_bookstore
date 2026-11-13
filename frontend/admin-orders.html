@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orders | Online Bookstore</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/admin-orders.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <div class="admin-head">
+      <h1>Orders</h1>
+      <select id="status-filter" aria-label="Show orders with status" class="filter-select">
+        <option value="">All orders</option>
+        <option value="PENDING">Awaiting payment</option>
+        <option value="PAID">Paid, ready to ship</option>
+        <option value="SHIPPED">Shipped</option>
+        <option value="DELIVERED">Delivered</option>
+        <option value="CANCELLED">Cancelled</option>
+      </select>
+    </div>
+    <p id="status" class="status" role="status">Loading…</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Order</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Placed</th>
+            <th scope="col" class="numeric">Total</th>
+            <th scope="col">Status</th>
+            <th scope="col"><span class="hint">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <nav id="pager" class="pager" aria-label="Pages"></nav>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

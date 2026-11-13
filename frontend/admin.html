@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage books | Online Bookstore</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/admin.js"></script>
+</head>
+<body>
+  <header id="site-header" class="site-header"></header>
+  <main class="page">
+    <div class="admin-head">
+      <h1>Manage books</h1>
+      <button id="add-book" class="button" type="button">Add book</button>
+    </div>
+    <form id="search-form" class="admin-search" role="search">
+      <input id="search" type="search" maxlength="100" placeholder="Search by title, author or ISBN" aria-label="Search books">
+      <button class="button button-quiet" type="submit">Search</button>
+    </form>
+    <p id="status" class="status" role="status">Loading…</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Category</th>
+            <th scope="col" class="numeric">Price</th>
+            <th scope="col" class="numeric">Stock</th>
+            <th scope="col">Status</th>
+            <th scope="col"><span class="hint">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <nav id="pager" class="pager" aria-label="Pages"></nav>
+  </main>
+
+  <dialog id="book-dialog" aria-labelledby="dialog-title">
+    <form id="book-form">
+      <h2 id="dialog-title" class="dialog-title">Add book</h2>
+      <p id="form-error" class="form-error" role="alert" hidden></p>
+      <div class="field">
+        <label for="book-title">Title</label>
+        <input id="book-title" name="book_title" maxlength="255" required>
+      </div>
+      <div class="field">
+        <label for="book-authors">Authors</label>
+        <textarea id="book-authors" name="authors" rows="2" required></textarea>
+        <p class="hint">One author per line, in credited order.</p>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="book-isbn">ISBN-13</label>
+          <input id="book-isbn" name="isbn" required>
+        </div>
+        <div class="field">
+          <label for="book-category">Category</label>
+          <select id="book-category" name="category" required></select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="book-price">Price ($)</label>
+          <input id="book-price" name="price" type="number" min="0" step="0.01" required>
+        </div>
+        <div class="field">
+          <label for="book-stock">Stock</label>
+          <input id="book-stock" name="stock" type="number" min="0" step="1" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="book-cover">Cover image URL (optional)</label>
+        <input id="book-cover" name="cover" type="url" maxlength="500">
+      </div>
+      <div class="field">
+        <label for="book-description">Description (optional)</label>
+        <textarea id="book-description" name="description" rows="3" maxlength="5000"></textarea>
+      </div>
+      <div class="dialog-actions">
+        <button id="cancel" class="button button-quiet" type="button">Cancel</button>
+        <button class="button" type="submit">Save</button>
+      </div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

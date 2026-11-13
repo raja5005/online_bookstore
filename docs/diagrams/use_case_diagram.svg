@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="770" viewBox="0 0 1100 770">
+<rect width="1100" height="770" fill="#ffffff"/>
+<text x="550" y="28" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#1f2937" text-anchor="middle" font-weight="bold">Online Bookstore System: Use Case Diagram</text>
+<rect x="255" y="45" width="590" height="695" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="695" y="92" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#6b7280" text-anchor="middle" font-weight="bold">Online Bookstore System</text>
+<line x1="130" y1="100" x2="290" y2="85" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="100" x2="290" y2="147" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="290" y2="147" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="100" x2="290" y2="209" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="290" y2="209" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="290" y2="271" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="290" y2="333" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="290" y2="395" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="290" y2="457" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="290" y2="519" stroke="#475569" stroke-width="1.3"/>
+<line x1="955" y1="280" x2="810" y2="170" stroke="#475569" stroke-width="1.3"/>
+<line x1="955" y1="280" x2="810" y2="250" stroke="#475569" stroke-width="1.3"/>
+<line x1="955" y1="280" x2="810" y2="330" stroke="#475569" stroke-width="1.3"/>
+<line x1="955" y1="280" x2="810" y2="410" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="445" y2="610" stroke="#475569" stroke-width="1.3"/>
+<line x1="955" y1="280" x2="655" y2="610" stroke="#475569" stroke-width="1.3"/>
+<line x1="130" y1="460" x2="445" y2="680" stroke="#475569" stroke-width="1.3"/>
+<line x1="955" y1="280" x2="655" y2="680" stroke="#475569" stroke-width="1.3"/>
+<ellipse cx="405" cy="85" rx="115" ry="22" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="405" y="81" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">UC-1</text>
+<text x="405" y="97" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Register</text>
+<ellipse cx="405" cy="147" rx="115" ry="22" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="405" y="143" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">UC-2</text>
+<text x="405" y="159" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Browse and search books</text>
+<ellipse cx="405" cy="209" rx="115" ry="22" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="405" y="205" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">UC-3</text>
+<text x="405" y="221" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">View book details</text>
+<ellipse cx="405" cy="271" rx="115" ry="22" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="405" y="267" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">UC-5</text>
+<text x="405" y="283" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Manage cart</text>
+<ellipse cx="405" cy="333" rx="115" ry="22" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="405" y="329" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">UC-6</text>
+<text x="405" y="345" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Place order</text>
+<ellipse cx="405" cy="395" rx="115" ry="22" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="405" y="391" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">UC-7</text>
+<text x="405" y="407" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Pay for order</text>
+<ellipse cx="405" cy="457" rx="115" ry="22" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="405" y="453" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">UC-8</text>
+<text x="405" y="469" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Track orders</text>
+<ellipse cx="405" cy="519" rx="115" ry="22" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="405" y="515" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">UC-9</text>
+<text x="405" y="531" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">View notifications</text>
+<ellipse cx="695" cy="170" rx="115" ry="22" fill="#ffffff" stroke="#b45309" stroke-width="1.5"/>
+<text x="695" y="166" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309" text-anchor="middle" font-weight="bold">UC-11</text>
+<text x="695" y="182" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Add book</text>
+<ellipse cx="695" cy="250" rx="115" ry="22" fill="#ffffff" stroke="#b45309" stroke-width="1.5"/>
+<text x="695" y="246" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309" text-anchor="middle" font-weight="bold">UC-12</text>
+<text x="695" y="262" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Update or deactivate book</text>
+<ellipse cx="695" cy="330" rx="115" ry="22" fill="#ffffff" stroke="#b45309" stroke-width="1.5"/>
+<text x="695" y="326" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309" text-anchor="middle" font-weight="bold">UC-13</text>
+<text x="695" y="342" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">View all orders</text>
+<ellipse cx="695" cy="410" rx="115" ry="22" fill="#ffffff" stroke="#b45309" stroke-width="1.5"/>
+<text x="695" y="406" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#b45309" text-anchor="middle" font-weight="bold">UC-14</text>
+<text x="695" y="422" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Ship or deliver order</text>
+<ellipse cx="550" cy="610" rx="105" ry="22" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<text x="550" y="606" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#334155" text-anchor="middle" font-weight="bold">UC-4</text>
+<text x="550" y="622" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Log in</text>
+<ellipse cx="550" cy="680" rx="105" ry="22" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+<text x="550" y="676" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#334155" text-anchor="middle" font-weight="bold">UC-10</text>
+<text x="550" y="692" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="normal">Cancel order</text>
+<circle cx="95" cy="72" r="12" fill="#ffffff" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="95" y1="84" x2="95" y2="116" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="75" y1="96" x2="115" y2="96" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="95" y1="116" x2="79" y2="142" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="95" y1="116" x2="111" y2="142" stroke="#1f2937" stroke-width="1.6"/>
+<text x="95" y="162" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="bold">Guest</text>
+<circle cx="95" cy="432" r="12" fill="#ffffff" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="95" y1="444" x2="95" y2="476" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="75" y1="456" x2="115" y2="456" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="95" y1="476" x2="79" y2="502" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="95" y1="476" x2="111" y2="502" stroke="#1f2937" stroke-width="1.6"/>
+<text x="95" y="522" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="bold">Customer</text>
+<circle cx="995" cy="252" r="12" fill="#ffffff" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="995" y1="264" x2="995" y2="296" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="975" y1="276" x2="1015" y2="276" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="995" y1="296" x2="979" y2="322" stroke="#1f2937" stroke-width="1.6"/>
+<line x1="995" y1="296" x2="1011" y2="322" stroke="#1f2937" stroke-width="1.6"/>
+<text x="995" y="342" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="bold">Admin</text>
+</svg>
