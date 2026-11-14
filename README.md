@@ -3,7 +3,7 @@
 Capstone project: an online bookstore with catalog browsing, user accounts,
 a shopping cart, orders with simulated payment, and book administration.
 
-**Team:** Rushik Reddy Minkuri, Drithi Mandhala, Lakshman Ega, Raja Simha Tatikonda
+**Team:** Rushik Reddy Minkuri 700783678, Drithi Mandhala 700783443, Lakshman Ega 700777300, Raja Simha Tatikonda 700786644
 
 **Stack:** Python + FastAPI, MySQL 8, simple HTML/JS frontend.
 
