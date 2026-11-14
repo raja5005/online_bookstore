@@ -41,10 +41,8 @@ repeat their hand-over line.
    - Tab 1: http://127.0.0.1:8000/ for the shop (Drithi, as the customer).
    - Tab 2: a private window on the same address (Lakshman, as the admin).
    - Tab 3: http://127.0.0.1:8000/docs for Swagger (Lakshman).
-4. **Open the slides** at the title slide:
-   https://claude.ai/artifact/UwwDaocNBg35i9h6Pge1Pw. Present them full screen,
-   or download them as PowerPoint or PDF from the deck's menu. The deck is
-   private until you share it from its Share menu.
+4. **Open the slides** at the title slide. Present them full screen, or open
+   the PowerPoint or PDF copy you downloaded.
 5. **Run one test file once**, so the test database is warm and the command is
    in Raja's terminal history:
 
